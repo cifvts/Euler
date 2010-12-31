@@ -46,15 +46,15 @@ int main()
   uint32_t tmp = 0;
   uint32_t current = 2;
 
-  /* Only Fib (3k) are evens, with k natural integer and
+  /* Only Fib (3k) are even, with k natural integer and
    * Fib (3k) = 4 * Fib (3 (k - 1)) + Fib (3 (k - 2))
-   * so we can evaluate only odd number:
+   * so we can evaluate only odd numbers:
    * Fib (3 * 0) = 0
    * Fib (3 * 1) = 2
    * Fib (3 * 2) = 8
    * ...
    * and using that we don't even need to track k, we need only
-   * the previou 2 even number
+   * the previous 2 even numbers
    */
   while (current < MAX)
     {
