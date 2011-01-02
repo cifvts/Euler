@@ -3,7 +3,7 @@ BIN=./bin
 
 CFLAGS=-O2 -lm -Wall
 
-main: 001 002 003 004 005
+main: 001 002 003 004 005 006
 
 clean:
 	rm -rf $(BIN)
@@ -25,3 +25,6 @@ clean:
 
 005: %.dir
 	gcc $(CFLAGS) $(SRC)/euler005.c -o $(BIN)/euler005
+
+006: %.dir
+	gcc $(CFLAGS) $(SRC)/euler006.c -o $(BIN)/euler006
