@@ -1,9 +1,12 @@
 SRC=./src
 BIN=./bin
 
-CFLAGS=-O2
+CFLAGS=-O2 -lm
 
-main: 001 002 003
+main: 001 002 003 004
+
+clean:
+	rm -rf $(BIN)
 
 %.dir:
 	test -d $(BIN) || mkdir -p $(BIN)
@@ -16,3 +19,6 @@ main: 001 002 003
 
 003: %.dir
 	gcc $(CFLAGS) $(SRC)/euler003.c -o $(BIN)/euler003
+
+004: %.dir
+	gcc $(CFLAGS) $(SRC)/euler004.c -o $(BIN)/euler004
