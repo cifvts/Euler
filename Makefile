@@ -1,9 +1,9 @@
 SRC=./src
 BIN=./bin
 
-CFLAGS=-O2 -lm
+CFLAGS=-O2 -lm -Wall
 
-main: 001 002 003 004
+main: 001 002 003 004 005
 
 clean:
 	rm -rf $(BIN)
@@ -22,3 +22,6 @@ clean:
 
 004: %.dir
 	gcc $(CFLAGS) $(SRC)/euler004.c -o $(BIN)/euler004
+
+005: %.dir
+	gcc $(CFLAGS) $(SRC)/euler005.c -o $(BIN)/euler005
