@@ -65,17 +65,27 @@ int main()
 		   * f1 = 0 because n have no divisors in [sqrt(n),1000].
 		   */
 		  if(!(f1 * f2 == palindrome))
-			/* A new palindrome number will be created */
-			  if(count % 100 == 0) {
-				  palindrome -= 100001;
-  				palindrome +=  90090;
-	  			palindrome +=   9900;
-		  	} else if(count % 10 == 0) {
-			  	palindrome -=  10010;
-				  palindrome +=   9900;
-  			} else
-	    		palindrome -=   1100;
+		    {
+			  /* A new palindrome number will be created */
+          if(count % 100 == 0)
+            {
+              palindrome -= 100001;
+              palindrome +=  90090;
+              palindrome +=   9900;
+            } 
+          else if(count % 10 == 0) 
+            {
+              palindrome -=  10010;
+              palindrome +=   9900;
+            } 
+          else 
+            {
+              palindrome -=   1100;
+            }
+        }
 		/* Else we've found n and his two divisors and loop will stop */
     }
   printf ("%d * %d = %d\n", f1, f2, palindrome);
+
+  return 0;
 }
